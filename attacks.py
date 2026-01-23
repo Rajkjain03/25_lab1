@@ -263,16 +263,14 @@ class MITMAttacker:
         return data
     
     def attack_drop(self, data):
-        """Drop messages randomly"""
-        if random.random() < 0.5:
-            print("\n" + "="*60)
-            print("ATTACK: MESSAGE DROPPING")
-            print("="*60)
-            print("  Action:   Dropping this message")
-            print("  Expected: Communication disrupted")
-            print("="*60)
-            return None
-        return data
+        """Drop all messages when enabled"""
+        print("\n" + "="*60)
+        print("ATTACK: MESSAGE DROPPING")
+        print("="*60)
+        print("  Action:   Dropping this message")
+        print("  Expected: Communication disrupted")
+        print("="*60)
+        return None
     
     def attack_reorder(self, data):
         """Reorder messages"""
